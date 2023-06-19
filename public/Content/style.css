@@ -1,0 +1,98 @@
+/* Round Profile Picture */
+.profile-img{ 
+  border-radius: 40%
+}
+.text-justify{
+  text-align: justify;
+}
+.container-fluid{
+  padding-left:100px;
+  padding-right:100px;
+}
+
+body{
+  margin-top: 7rem;
+  margin-bottom: 5rem;
+}
+
+a{color: inherit;
+
+}
+a:hover{
+  color: inherit;
+}
+
+/* Gradient Color for specific texts */
+.text-gradient{
+  background: -webkit-linear-gradient(315deg, #1e30f3 0%, #e21e80 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradient background for Quote at bottom of Projects & Services */
+.bg-gradient-primary-to-secondary{
+  background:linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+}
+
+.feature{
+  display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.5rem;
+}
+
+footer{
+  margin-top: 7rem;
+}
+
+.display-3{
+  font-size: 3rem;
+}
+
+
+
+/* Services CSS */
+
+  .price-innerdetail h5 {
+        font-weight: 400;
+        letter-spacing: 2px;
+        font-size: 15px;
+    }
+    
+    .price-innerdetail p {
+        font-size: 50px;
+    }
+    
+    .detail-pricing {
+        border-bottom: 1px solid;
+        padding: 30px 0 30px 0;
+    }
+    
+    .detail-pricing .float-left {
+        padding: 0 0 0 40px;
+    }
+    
+    .detail-pricing .float-left i {
+        position: absolute;
+        left: 0;
+        font-size: 20px;
+    }
+    
+    .detail-pricing span {
+        display: inline-block;
+        position: relative;
+        font-weight: 400;
+    }
+    
+    .wrap-price {
+        background: rgba(32, 33, 36, .1);
+        padding: 50px 20px 50px;
+        border-radius: 10px;
+    }
+    
+    .center-wrap {
+        background: #070707;
+        color: #fff;
+    }

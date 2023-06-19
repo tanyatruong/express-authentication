@@ -1,0 +1,43 @@
+<div class="container">
+  <h1>Contact List</h1>
+
+  <a href="/contact-list/add" class="btn btn-primary mb-3">Add New Contact</a>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if (typeof displayName == 'string' && displayName) { %>
+        <% for(let count = 0; count < ContactList.length; count++){ %>
+          <tr>
+            <td>
+              <%= ContactList[count].name %>
+            </td>
+            <td>
+              <%= ContactList[count].phoneNumber %>
+            </td>
+            <td>
+              <%= ContactList[count].email %>
+            </td>
+            <td>
+              <a href="/contact-list/edit/<%= ContactList[count]._id %>" class="btn btn-primary">Update</a>
+            </td>
+            <td>
+              <form action="/contact-list/delete/<%= ContactList[count]._id %>" method="POST">
+                <button type="submit" class="btn btn-danger">Delete</button>
+              </form>
+            </td>
+          </tr>
+          <%}; %> 
+        <% } else { %>
+        <% } %>
+    </tbody>
+  </table>
+</div>

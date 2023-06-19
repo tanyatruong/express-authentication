@@ -1,0 +1,60 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img src="logo.png" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="ms-auto navbar-nav mb-2 mb-lg-0">
+        <!-- Home Button -->
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <!-- About Button -->
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+
+        <!-- Services Button -->
+        <li class="nav-item">
+          <a class="nav-link" href="/services">Services</a>
+        </li>
+
+
+        <!-- Projects Button -->
+        <div class="btn-group">
+          <a class="btn nav-link" href="/projects" >Projects</a>
+          <button type="button" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" target="_blank" href="http://studentweb.cencol.ca/mtruon32/COMP125/Assignment3/index.html">Bug Smasher</a></li>
+            <li><a class="dropdown-item" target="_blank" href="http://studentweb.cencol.ca/mtruon32/FinalProject/">E-Commerce</a></li>
+            <li><a class="dropdown-item" target="_blank" href="http://studentweb.cencol.ca/mtruon32/COMP125/Assignment2/index.html">Interactive Slideshow</a></li> 
+          </ul>
+        </div>
+        
+        <!-- Contact Button -->
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/contact">Contact</a>
+        </li>
+
+                <!-- Contacts Button -->
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/contact-list">Contacts</a>
+        </li>
+
+          <!-- Login Button -->
+          <% if (typeof displayName == 'string' && displayName) { %>
+            <li class="navbar-text"><i class="fas fa-lg fa-user"></i> Welcome, <%= displayName %></li>
+            <li class="nav-item"><a href="/auth/logout" class="nav-link">
+              <i class="fas fa-lg fa-sign-out-alt"></i> Logout</a></li>
+            <% } else  { %>
+              <li class="nav-item"><a href="/auth" class="nav-link">
+                <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li>
+            <% } %>
+      </ul>
+    </div>
+  </div>
+</nav>

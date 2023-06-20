@@ -16,12 +16,13 @@ let flash = require('connect-flash');
 const mongoose = require('mongoose');
 let DB = require('./db');
 // point mongoose to the DB URI
-mongoose.connect(DB.URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+mongoose.connect(DB.URI);
+
+let mongoDB = mongoose.connection;
+mongoDB.on('error', console.error.bind(console, 'Connection Error:'));
+mongoDB.once('open', ()=>{
+  console.log('Connected to MongoDB...');
 })
-  .then(() => console.log('Connected to MongoDB'))
-  .catch((error) => console.log(error));
 
 //Set up routes
 const indexRouter = require('../routes/index');
